@@ -1,0 +1,51 @@
+<%= form_for @task do |f| %>
+  <% if @task.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@task.errors.count, "error") %> prohibited
+      this task from being saved:</h2>
+    <ul>
+    <% @task.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="large-12 columns">
+      <%= f.label :text %>
+      <%= f.text_field :text %>
+    </div>
+
+    <div class="large-12 columns">
+      <%= f.label :points %>
+      <%= select_tag(:points, 
+          options_for_select([
+            ['1', 1], 
+            ['2', 2], 
+            ['3', 3], 
+            ['4', 4], 
+            ['5', 5]])) %>
+    </div>
+
+    <div class="large-12 columns">
+      <%= f.label :dueDate %>
+      <%= f.text_field :dueDate, :class => 'datepicker' %>
+    </div>
+
+    <div class="large-12 columns">
+      <%= check_box_tag(:isRecurring) %>
+      <%= f.label :isRecurring %>
+    </div>
+ 
+    <div class="large-12 columns">
+      <%= f.submit %>
+    </div>
+  </div>
+  
+<% end %>

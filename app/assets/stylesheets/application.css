@@ -1,0 +1,39 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require foundation_and_overrides
+ *= require jquery.ui.all
+ *= require_self
+ *= require_tree .
+ */
+/* line 17, ../sass/application.scss */
+html {
+  height: 100%;
+}
+
+/* line 18, ../sass/application.scss */
+body {
+  height: 100%;
+  background: #efefef;
+}
+
+/* line 19, ../sass/application.scss */
+.container {
+  min-height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2em;
+  background: #fff;
+}
+
+/* line 22, ../sass/application.scss */
+table {
+  width: 100%;
+}
