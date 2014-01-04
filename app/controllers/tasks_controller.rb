@@ -45,7 +45,7 @@ class TasksController < ApplicationController
 
 private
   def task_params
-    params.require(:task).permit(:title, :text, :points, :dueDate, :isRecurring)
+    params.require(:task).permit(:title, :body, :due_date)
   end
 
 end

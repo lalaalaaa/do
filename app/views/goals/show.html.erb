@@ -1,0 +1,19 @@
+<h1>Listing goal</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <tr>
+    <td><%= @goal.title %></td>
+    <td><%= @goal.body %></td>
+    <td><%= link_to 'Edit', edit_goal_path(@goal) %></td>
+    <td><%= link_to 'Destroy', goal_path(@goal),
+        method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+</table>
+
+<%= link_to 'Back', goals_path %>
